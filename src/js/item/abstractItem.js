@@ -50,8 +50,17 @@ export default class AbstractItem {
     createHotspotElement() {
         const element = DomHelper.createElement('div', {'class': 'hotspot icon-radio-checked'});
         element.setAttribute('data-for', this.identifier);
-        element.style.left = (this.position.left) + 'px';
-        element.style.top = this.position.top + 'px';
+        var positionLeft = this.position.left;
+        if (!/^(\d+)(px|%)$/.test(positionLeft)) {
+          positionLeft += 'px';
+        }
+        element.style.left = positionLeft;
+
+        var positionTop = this.position.top;
+        if (!/^(\d+)(px|%)$/.test(positionTop)) {
+          positionTop += 'px';
+        }
+        element.style.top = positionTop;
 
         return element;
     }

@@ -1,31 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Image - Examples</title>
-
-    <!-- Specific styles of a scene -->
-    <style>
-        .interactive-image {
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Interactive Image - Examples</title><style>.interactive-image {
             margin: auto;
             width: 800px;
             height: 600px;
             background-image: url('../docs/_static/background.jpg');
-        }
-    </style>
-
-    <!-- Include Interactive Image jQuery plugin Styles -->
-<link href="../dist/interactive-image.css" rel="stylesheet"></head>
-<body>
-    <!-- Main container of a scene -->
-    <div id="my-interactive-image"></div>
-
-    <!-- Include jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script>
-        // Plugin Items collection
+        }</style><link href="../dist/interactive-image.min.css" rel="stylesheet"></head><body><div id="my-interactive-image"></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script>// Plugin Items collection
         var items = [
             // Text items
             {
@@ -228,9 +206,4 @@
         // Plugin activation
         $(document).ready(function() {
             $("#my-interactive-image").interactiveImage(items, options);
-        });
-    </script>
-
-    <!-- Include Interactive Image jQuery plugin JavaScript -->
-<script src="../dist/interactive-image.js"></script></body>
-</html>
+        });</script><script src="../dist/interactive-image.min.js"></script></body></html>
